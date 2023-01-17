@@ -10,7 +10,8 @@ URL="https://dlcdn.apache.org/kafka/3.3.1/$KAFKA_EXTRACT_FOLDER.tgz"
 echo "Download kafka packaging file from url: $URL"
 
 # Download the kafka package to local file system
-wget $URL $KAFKA_EXTRACT_FOLDER.tgz 
+wget -O "$KAFKA_EXTRACT_FOLDER.tgz" $URL
+echo "Download completed"
 
 # Extract the downloaded file
 tar -xzvf $KAFKA_EXTRACT_FOLDER.tgz
@@ -19,5 +20,5 @@ tar -xzvf $KAFKA_EXTRACT_FOLDER.tgz
 rm $KAFKA_EXTRACT_FOLDER.tgz
 
 # rename the the kafka directory to general name
-mv $KAFKA_EXTRACT_FOLDER kafka_binary_package
+mv $KAFKA_EXTRACT_FOLDER kafka-binary
 echo "Completed installation of kafka"
