@@ -1,5 +1,5 @@
 #!/bin/bash
-cd kafka_binary_package
+cd kafka-binary
 
 KAFKA_CLUSTER_ID="$(bin/kafka-storage.sh random-uuid)"
 

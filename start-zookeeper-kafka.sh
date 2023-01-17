@@ -1,5 +1,5 @@
 #!/bin/bash
-cd kafka_binary_package
+cd kafka-binary
 
 # Start zookeeper
 nohup bin/zookeeper-server-start.sh config/zookeeper.properties > zk.log 2>&1 &
